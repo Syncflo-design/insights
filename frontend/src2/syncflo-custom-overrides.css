@@ -1,0 +1,131 @@
+/* =========================================================
+   Syncflo Custom Theme — Insights v3 dashboard overrides
+
+   Imported by src2/main.ts. Uses high-specificity selectors
+   designed to win over Insights' inline Tailwind utilities
+   without modifying any upstream component files.
+
+   To retune colours, edit the values below and redeploy.
+   The companion chart palette lives in
+   src2/syncflo-custom-chart-palette.ts.
+
+   Verified DOM (Insights v3):
+     .vgl-layout                              dashboard canvas
+     .vgl-item:nth-child(N)                   each tile
+     [class*=rounded][class*=bg-white][class*=shadow]   KPI / hero card
+     [class*=divide-y][class*=bg-white][class*=shadow]  table card
+     thead.sticky td                          table header cell
+   ========================================================= */
+
+
+/* === Dashboard canvas === */
+.vgl-layout {
+  background: #f5f6f8 !important;
+  padding: 8px !important;
+}
+
+
+/* === KPI card 1 — Slate blue === */
+.vgl-item:nth-child(1) [class*="rounded"][class*="bg-white"][class*="shadow"] {
+  background: linear-gradient(140deg, #6b85a3 0%, #4a6580 100%) !important;
+  box-shadow: 0 4px 18px rgba(107,133,163,0.30) !important;
+  border-radius: 14px !important;
+  transition: transform 0.2s ease !important;
+}
+.vgl-item:nth-child(1) [class*="rounded"][class*="bg-white"][class*="shadow"]:hover {
+  transform: translateY(-2px) !important;
+}
+.vgl-item:nth-child(1) [class*="rounded"][class*="bg-white"][class*="shadow"] span,
+.vgl-item:nth-child(1) [class*="rounded"][class*="bg-white"][class*="shadow"] div {
+  color: #ffffff !important;
+}
+
+
+/* === KPI card 2 — Sage green === */
+.vgl-item:nth-child(2) [class*="rounded"][class*="bg-white"][class*="shadow"] {
+  background: linear-gradient(140deg, #82a085 0%, #5d7a60 100%) !important;
+  box-shadow: 0 4px 18px rgba(130,160,133,0.30) !important;
+  border-radius: 14px !important;
+  transition: transform 0.2s ease !important;
+}
+.vgl-item:nth-child(2) [class*="rounded"][class*="bg-white"][class*="shadow"]:hover {
+  transform: translateY(-2px) !important;
+}
+.vgl-item:nth-child(2) [class*="rounded"][class*="bg-white"][class*="shadow"] span,
+.vgl-item:nth-child(2) [class*="rounded"][class*="bg-white"][class*="shadow"] div {
+  color: #ffffff !important;
+}
+
+
+/* === KPI card 3 — Soft amber === */
+.vgl-item:nth-child(3) [class*="rounded"][class*="bg-white"][class*="shadow"] {
+  background: linear-gradient(140deg, #c4a373 0%, #99794d 100%) !important;
+  box-shadow: 0 4px 18px rgba(196,163,115,0.30) !important;
+  border-radius: 14px !important;
+  transition: transform 0.2s ease !important;
+}
+.vgl-item:nth-child(3) [class*="rounded"][class*="bg-white"][class*="shadow"]:hover {
+  transform: translateY(-2px) !important;
+}
+.vgl-item:nth-child(3) [class*="rounded"][class*="bg-white"][class*="shadow"] span,
+.vgl-item:nth-child(3) [class*="rounded"][class*="bg-white"][class*="shadow"] div {
+  color: #ffffff !important;
+}
+
+
+/* === KPI card 4 — Dusty rose (replaces harsh red) === */
+.vgl-item:nth-child(4) [class*="rounded"][class*="bg-white"][class*="shadow"] {
+  background: linear-gradient(140deg, #b07e7e 0%, #855555 100%) !important;
+  box-shadow: 0 4px 18px rgba(176,126,126,0.30) !important;
+  border-radius: 14px !important;
+  transition: transform 0.2s ease !important;
+}
+.vgl-item:nth-child(4) [class*="rounded"][class*="bg-white"][class*="shadow"]:hover {
+  transform: translateY(-2px) !important;
+}
+.vgl-item:nth-child(4) [class*="rounded"][class*="bg-white"][class*="shadow"] span,
+.vgl-item:nth-child(4) [class*="rounded"][class*="bg-white"][class*="shadow"] div {
+  color: #ffffff !important;
+}
+
+
+/* === Hero chart (position 5) === */
+.vgl-item:nth-child(5) [class*="rounded"][class*="bg-white"][class*="shadow"] {
+  border-top: 5px solid #6b85a3 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
+  border-radius: 14px !important;
+}
+
+
+/* === Tables (positions 6, 7) === */
+.vgl-item:nth-child(6) [class*="divide-y"][class*="bg-white"][class*="shadow"] {
+  border-top: 5px solid #82a085 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+.vgl-item:nth-child(7) [class*="divide-y"][class*="bg-white"][class*="shadow"] {
+  border-top: 5px solid #6b85a3 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+
+
+/* === Table headers (global) === */
+thead.sticky {
+  background: linear-gradient(90deg, #f5f6fa, #eef1f7) !important;
+}
+thead.sticky td {
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: #37474f !important;
+}
+
+
+/* === Row hover (global) === */
+tbody tr:hover td {
+  background: #eef2f6 !important;
+}
