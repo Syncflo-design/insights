@@ -129,3 +129,170 @@ thead.sticky td {
 tbody tr:hover td {
   background: #eef2f6 !important;
 }
+
+
+/* =========================================================
+   Drill-through modal — opened by syncflo-custom-drill-through.ts
+   ========================================================= */
+
+.syncflo-drill-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  font-size: 13px;
+  color: #1f2933;
+}
+
+.syncflo-drill-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 28, 38, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.syncflo-drill-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90vw, 1100px);
+  max-height: 85vh;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.30);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.syncflo-drill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e6e9ee;
+  background: linear-gradient(140deg, #6b85a3 0%, #4a6580 100%);
+  color: #ffffff;
+}
+
+.syncflo-drill-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.syncflo-drill-close {
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.85;
+  padding: 0 6px;
+}
+
+.syncflo-drill-close:hover {
+  opacity: 1;
+}
+
+.syncflo-drill-body {
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: 16px 20px;
+}
+
+.syncflo-drill-count {
+  color: #6b7280;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.syncflo-drill-loading,
+.syncflo-drill-empty,
+.syncflo-drill-error {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+}
+
+.syncflo-drill-error {
+  color: #a06868;
+}
+
+.syncflo-drill-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.syncflo-drill-table thead th {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, #f5f6fa, #eef1f7);
+  text-align: left;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #37474f;
+  padding: 10px 12px;
+  border-bottom: 1px solid #d6dde6;
+}
+
+.syncflo-drill-table tbody td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f0f3f7;
+  vertical-align: top;
+}
+
+.syncflo-drill-table tbody tr:hover td {
+  background: #eef2f6;
+}
+
+.syncflo-drill-table td.syncflo-drill-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.syncflo-drill-table a {
+  color: #4a6580;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.syncflo-drill-table a:hover {
+  text-decoration: underline;
+}
+
+.syncflo-drill-footer {
+  padding: 12px 20px;
+  border-top: 1px solid #e6e9ee;
+  background: #f7f9fc;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.syncflo-drill-erp-link {
+  color: #4a6580;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.syncflo-drill-erp-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Hover affordance for drillable KPI tiles */
+[data-syncflo-drill="true"] {
+  transition: transform 0.18s ease, box-shadow 0.18s ease !important;
+}
+[data-syncflo-drill="true"]:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18) !important;
+}
