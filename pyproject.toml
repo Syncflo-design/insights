@@ -71,3 +71,7 @@ docstring-code-format = true
 Homepage = "https://frappe.io/insights"
 Repository = "https://github.com/frappe/insights.git"
 "Bug Reports" = "https://github.com/frappe/insights/issues"
+
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<17.0.0"
